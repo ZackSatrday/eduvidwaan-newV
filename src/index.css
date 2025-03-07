@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-sora: "Sora", "sans-serif"; 
+    --font-DM: "DM Sans", "sans-serif"; 
+
+    --color-head: #111827;
+    --color-htext : #7376f0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #1F2937; /* Almost Black */
+    color: #ffffff; /* Light Gray */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #232323;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #656565;
+    border-radius: 10px;
+}
+
+
+::selection{
+    color: #F59E0B;
+}
+
+@layer utilities{
+    .flex-center {
+        @apply flex justify-center items-center;
+      }
+    .button-style{
+        @apply bg-[#6366F1] font-bold rounded-lg hover:bg-[#494cf2] cursor-pointer font-sora;
+    }
+    .gradient-bg{
+        @apply bg-gradient-to-b from-[#121c35] to-[#1f2a3c];
+    }
+    .trans-200{
+        @apply transition-all duration-200;
+    }
+}
